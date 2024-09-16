@@ -1,0 +1,10 @@
+server:
+  port: 8090
+
+#Eureka配置
+eureka:
+  client:
+    register-with-eureka: false #是否向Eureka注册中心注册自己
+    service-url: #监控页面
+      defaultZone: http://eureka7001.com:7001/eureka/
+

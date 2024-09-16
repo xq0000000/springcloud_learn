@@ -1,0 +1,5 @@
+#用户级别配置
+
+spring:
+  application:
+    name: config-dept

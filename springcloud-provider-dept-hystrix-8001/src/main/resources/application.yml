@@ -1,0 +1,26 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    url: jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+#Eureka配置，服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka/
+  instance:
+    instance-id: springcloud-provider-dept-hystrix-8001 #修改默认描述信息
+
+info:
+  app.name: xiaoqi-springcloud
+  company.name: xiaoqi
